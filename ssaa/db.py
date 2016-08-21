@@ -1,0 +1,3 @@
+DB = {
+    'Inndy': 'helloworld'
+}

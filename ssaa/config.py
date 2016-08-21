@@ -1,0 +1,2 @@
+user = 'Inndy'
+secret = 'helloworld'
