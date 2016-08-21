@@ -12,3 +12,7 @@ Protect your unencrypted service and provide simple authentication.
 - [ ] Refactor code into a python package
 - [ ] Create authentication interface
 - [ ] Write document
+
+## License
+
+[MIT License](LICENSE)
