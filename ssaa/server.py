@@ -46,8 +46,9 @@ while True:
 #                    'DHE-RSA-AES256-GCM-SHA384', 'DH-DSS-AES256-GCM-SHA384'
 #                    )
                 )
-    except:
+    except Exception as e:
         print('[server] can not wrap incoming socket')
+        print(e)
         incoming_sock = None
         continue
 
