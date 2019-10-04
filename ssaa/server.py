@@ -14,8 +14,7 @@ def auth_routine(sock):
     user = sockutils.recvstring_from_socket(sock)
     if not user:
         return False
-    with open('/dev/urandom', 'rb') as random:
-        random_bytes = random.read(16)
+    random_bytes = os.urandom(16)
     sockutils.sendstring_to_socket(sock, random_bytes)
     proof = sockutils.recvstring_from_socket(sock)
     return authenticator.auth(random_bytes, user, proof)
