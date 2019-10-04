@@ -9,13 +9,13 @@ import sockutils
 import authenticator
 
 try:
-    import config
+    import client_config
 except ImportError:
-    class config:
+    class client_config:
         user = ''
         secret = ''
     print('''\
-Tips: you can put your username and secert in config.py
+Tips: you should put your username and secert in client_config.py
 Example:
 
 user = 'inndy'
@@ -28,8 +28,8 @@ except IndexError:
     print('Usage: python3 %s ip port' % sys.argv[0])
     exit()
 
-username = config.user or input('User: ').strip()
-secret = config.secret or getpass.getpass('Secret: ')
+username = client_config.user or input('User: ').strip()
+secret = client_config.secret or getpass.getpass('Secret: ')
 
 def connect():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

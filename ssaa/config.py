@@ -1,2 +1,0 @@
-user = 'Inndy'
-secret = 'helloworld'
